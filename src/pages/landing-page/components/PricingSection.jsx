@@ -13,15 +13,14 @@ const PricingSection = () => {
       price: { monthly: 0, yearly: 0 },
       description: 'Perfect for getting started',
       features: [
-        'Save up to 100 items per month',
-        'Basic semantic search',
+        'Basic search functionality',
         'Browser extension',
         'Single device sync',
         'Email support'
       ],
       limitations: [
-        'Limited to 100 saves/month',
         'Basic search only',
+        'Limited to single device',
         'No team features'
       ],
       cta: 'Start Free',
@@ -30,17 +29,17 @@ const PricingSection = () => {
     },
     {
       id: 'pro',
-      name: 'Professional',
+      name: 'Standard',
       price: { monthly: 12, yearly: 120 },
       description: 'For serious knowledge workers',
       features: [
-        'Unlimited saves and searches',
+        'Everything in Free',
         'Advanced AI semantic search',
         'Cross-device sync',
+        'AI content summarization',
+        'Dashboard & AI support',
         'PDF and document analysis',
-        'Smart tagging and categorization',
-        'Export and backup options',
-        'Priority support'
+        'Export and backup options'
       ],
       limitations: [],
       cta: 'Start Free Trial',
@@ -53,7 +52,7 @@ const PricingSection = () => {
       price: { monthly: 25, yearly: 250 },
       description: 'Collaborative research teams',
       features: [
-        'Everything in Professional',
+        'Everything in Standard',
         'Team workspaces',
         'Shared knowledge bases',
         'Advanced collaboration tools',
@@ -73,29 +72,36 @@ const PricingSection = () => {
     {
       category: 'Core Features',
       items: [
-        { name: 'Monthly saves limit', free: '100', pro: 'Unlimited', team: 'Unlimited' },
-        { name: 'Semantic search', free: 'Basic', pro: 'Advanced AI', team: 'Advanced AI' },
+        { name: 'Search functionality', free: 'Basic', pro: 'Advanced AI semantic', team: 'Advanced AI semantic' },
         { name: 'Browser extension', free: '✓', pro: '✓', team: '✓' },
-        { name: 'Cross-device sync', free: '1 device', pro: 'All devices', team: 'All devices' },
+        { name: 'Device sync', free: 'Single device', pro: 'Cross-device', team: 'Cross-device' },
+        { name: 'AI content summarization', free: '✗', pro: '✓', team: '✓' },
         { name: 'PDF analysis', free: '✗', pro: '✓', team: '✓' }
       ]
     },
     {
-      category: 'Collaboration',
+      category: 'AI & Analytics',
       items: [
-        { name: 'Team workspaces', free: '✗', pro: '✗', team: '✓' },
-        { name: 'Shared knowledge bases', free: '✗', pro: '✗', team: '✓' },
-        { name: 'Real-time collaboration', free: '✗', pro: '✗', team: '✓' },
-        { name: 'Admin controls', free: '✗', pro: '✗', team: '✓' }
+        { name: 'Dashboard & AI support', free: '✗', pro: '✓', team: '✓' },
+        { name: 'Export and backup', free: '✗', pro: '✓', team: '✓' },
+        { name: 'Advanced collaboration', free: '✗', pro: '✗', team: '✓' },
+        { name: 'Custom integrations', free: '✗', pro: '✗', team: '✓' }
       ]
     },
     {
-      category: 'Support & Security',
+      category: 'Team & Enterprise',
       items: [
-        { name: 'Support level', free: 'Email', pro: 'Priority', team: 'Dedicated' },
-        { name: 'SSO integration', free: '✗', pro: '✗', team: '✓' },
-        { name: 'Custom integrations', free: '✗', pro: '✗', team: '✓' },
-        { name: 'SLA guarantee', free: '✗', pro: '✗', team: '99.9%' }
+        { name: 'Team workspaces', free: '✗', pro: '✗', team: '✓' },
+        { name: 'Shared knowledge bases', free: '✗', pro: '✗', team: '✓' },
+        { name: 'Admin dashboard', free: '✗', pro: '✗', team: '✓' },
+        { name: 'SSO integration', free: '✗', pro: '✗', team: '✓' }
+      ]
+    },
+    {
+      category: 'Support',
+      items: [
+        { name: 'Support level', free: 'Email', pro: 'Dashboard & AI', team: 'Dedicated' },
+        { name: 'Response time', free: '48 hours', pro: '24 hours', team: '4 hours' }
       ]
     }
   ];

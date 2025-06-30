@@ -8,7 +8,7 @@ const Footer = () => {
     {
       title: "Product",
       links: [
-        { name: "Features", href: "#benefits" },
+        { name: "Features", href: "#core-capabilities" },
         { name: "Pricing", href: "#pricing" },
         { name: "Browser Extension", href: "#" },
         { name: "API Documentation", href: "#" },
@@ -21,7 +21,6 @@ const Footer = () => {
       links: [
         { name: "Help Center", href: "#" },
         { name: "Tutorials", href: "#" },
-        { name: "Blog", href: "#" },
         { name: "Research Papers", href: "#" },
         { name: "Case Studies", href: "#" },
         { name: "Community", href: "#" }

@@ -68,7 +68,7 @@ const SolutionShowcase = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background-secondary to-background">
+    <section id="how-it-works" className="py-20 bg-gradient-to-b from-background-secondary to-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">

@@ -46,11 +46,11 @@ const Header = () => {
               <a href="#pricing" className="text-text-secondary hover:text-primary font-inter transition-colors">
                 Pricing
               </a>
-              <a href="#success-stories" className="text-text-secondary hover:text-primary font-inter transition-colors">
+              <a href="#testimonials" className="text-text-secondary hover:text-primary font-inter transition-colors">
                 Reviews
               </a>
-              <a href="#blog" className="text-text-secondary hover:text-primary font-inter transition-colors">
-                Blog
+              <a href="#faq" className="text-text-secondary hover:text-primary font-inter transition-colors">
+                FAQ
               </a>
             </nav>
 
@@ -118,11 +118,11 @@ const Header = () => {
                 <a href="#pricing" className="text-text-secondary hover:text-primary font-inter transition-colors">
                   Pricing
                 </a>
-                <a href="#success-stories" className="text-text-secondary hover:text-primary font-inter transition-colors">
+                <a href="#testimonials" className="text-text-secondary hover:text-primary font-inter transition-colors">
                   Reviews
                 </a>
-                <a href="#blog" className="text-text-secondary hover:text-primary font-inter transition-colors">
-                  Blog
+                <a href="#faq" className="text-text-secondary hover:text-primary font-inter transition-colors">
+                  FAQ
                 </a>
                 
                 <div className="border-t border-border pt-4">
