@@ -75,74 +75,51 @@ const SolutionShowcase = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-text-primary mb-6">
             Meet Your AI-Powered
             <span className="block text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text">
-              Digital Hippocampus
+              Memory Assistant
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto font-inter leading-relaxed">
-            Search your saved content using natural language, just like talking to a research assistant who remembers everything.
+          <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto font-inter leading-relaxed mb-8">
+            Just like the hippocampus in your brain forms memories, HippoCampus AI remembers everything you find online. 
+            But here's the magic: you don't search by folder or tag. You search the way you think.
           </p>
-        </div>
-
-        <div className="grid lg:grid-cols-1 gap-12 items-center">
-          {/* Features */}
-          <div className="space-y-6">
-            {/* AI Capabilities */}
-            <div className="glassmorphism p-6 rounded-2xl">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
-                  <Icon name="Brain" size={24} color="white" />
+          
+          {/* Example Cards */}
+          <div className="max-w-4xl mx-auto mb-8">
+            <p className="text-text-secondary font-inter mb-6">
+              Instead of trying to remember "Was it in my shopping folder or lifestyle folder?" just ask:
+            </p>
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              {/* Old Way Card */}
+              <div className="glassmorphism p-6 rounded-xl border-l-4 border-red-400">
+                <div className="flex items-center mb-3">
+                  <Icon name="FolderOpen" size={20} color="#ef4444" />
+                  <span className="ml-2 text-sm font-medium text-red-600">Old Way</span>
                 </div>
-                <div>
-                  <h3 className="text-lg font-poppins font-bold text-text-primary">
-                    Semantic Understanding
-                  </h3>
-                  <p className="text-text-secondary font-inter text-sm">
-                    AI understands context, not just keywords
-                  </p>
-                </div>
+                <p className="text-text-secondary text-sm font-inter">
+                  "Let me check... was it in Shopping folder? Or maybe Lifestyle? 
+                  Or did I save it in Random Stuff? Ugh, where did I put that coffee brand?"
+                </p>
               </div>
-              <ul className="space-y-2">
-                {[
-                  "Natural language queries",
-                  "Context-aware results",
-                  "Confidence scoring",
-                  "Cross-content connections"
-                ].map((feature, index) => (
-                  <li key={index} className="flex items-center space-x-3">
-                    <Icon name="Check" size={16} color="var(--color-success)" />
-                    <span className="text-text-secondary font-inter text-sm">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Speed & Accuracy */}
-            <div className="glassmorphism p-6 rounded-2xl">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-accent to-warning rounded-xl flex items-center justify-center">
-                  <Icon name="Zap" size={24} color="white" />
+              
+              {/* New Way Card */}
+              <div className="glassmorphism p-6 rounded-xl border-l-4 border-green-400">
+                <div className="flex items-center mb-3">
+                  <Icon name="Sparkles" size={20} color="#22c55e" />
+                  <span className="ml-2 text-sm font-medium text-green-600">With HippoCampus</span>
                 </div>
-                <div>
-                  <h3 className="text-lg font-poppins font-bold text-text-primary">
-                    Lightning Fast
-                  </h3>
-                  <p className="text-text-secondary font-inter text-sm">
-                    Sub-second search across all content
-                  </p>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-3 bg-success-50 rounded-lg">
-                  <div className="text-xl font-poppins font-bold text-success mb-1">&lt;0.5s</div>
-                  <div className="text-xs text-text-secondary font-inter">Search Speed</div>
-                </div>
-                <div className="text-center p-3 bg-primary-50 rounded-lg">
-                  <div className="text-xl font-poppins font-bold text-primary mb-1">95%</div>
-                  <div className="text-xs text-text-secondary font-inter">Accuracy</div>
+                <p className="text-text-secondary text-sm font-inter mb-3">
+                  "Show me that sustainable coffee brand from Instagram"
+                </p>
+                <div className="text-green-600 font-medium text-sm">
+                  💥 Boom—there it is!
                 </div>
               </div>
             </div>
           </div>
+          
+          <p className="text-xl font-poppins font-semibold text-text-primary">
+            It's not about organizing better. It's about remembering smarter.
+          </p>
         </div>
       </div>
     </section>

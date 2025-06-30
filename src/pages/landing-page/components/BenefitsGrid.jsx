@@ -8,16 +8,16 @@ const BenefitsGrid = () => {
   const benefits = [
     {
       id: 1,
-      title: "Save Instantly",
+      title: "Save Anything, Instantly",
       subtitle: "One-click capture from anywhere",
-      description: "Browser extension automatically extracts and saves content with full context, tags, and metadata. Works on any website, PDF, or document.",
+      description: "See something cool? One click saves it—whether it's a TikTok hack, Amazon product, job posting, or Twitter thread. Context included.",
       icon: "Download",
       color: "from-primary to-secondary",
       features: [
-        "Browser extension for Chrome, Firefox, Safari",
-        "Auto-tagging with AI content analysis",
-        "Full-text extraction and OCR support",
-        "Bulk import from existing bookmarks"
+        "Save from any website or app",
+        "TikTok, Instagram, Twitter threads",
+        "Amazon products, job postings",
+        "Full context automatically captured"
       ],
       demo: {
         type: "extension",
@@ -26,16 +26,16 @@ const BenefitsGrid = () => {
     },
     {
       id: 2,
-      title: "Search Intelligently",
-      subtitle: "Natural language understanding",
-      description: "Ask questions in plain English and get contextually relevant results. No more keyword guessing or complex search operators.",
+      title: "Find Everything, Naturally",
+      subtitle: "Natural language search",
+      description: "Ask for what you want in plain English: \"that workout routine for small apartments\" or \"the productivity tool from last month's newsletter.\"",
       icon: "Search",
       color: "from-accent to-warning",
       features: [
-        "Semantic search with AI understanding",
-        "Cross-reference related content",
-        "Search inside PDFs and documents",
-        "Visual similarity matching"
+        "Plain English search queries",
+        "Find by description, not keywords",
+        "Search across all saved content",
+        "Smart context understanding"
       ],
       demo: {
         type: "search",
@@ -44,37 +44,37 @@ const BenefitsGrid = () => {
     },
     {
       id: 3,
-      title: "Remember Everything",
-      subtitle: "Cross-device synchronization",
-      description: "Access your knowledge base from any device. Seamless sync ensures your research is always available when inspiration strikes.",
-      icon: "Cloud",
+      title: "Use What You Saved",
+      subtitle: "Turn saves into action",
+      description: "Finally turn your saved content into action. Buy that product, try that recipe, apply to that job—because you can actually find it when you need it.",
+      icon: "Target",
       color: "from-secondary to-primary",
       features: [
-        "Real-time sync across all devices",
-        "Offline access to saved content",
-        "Collaborative sharing and teams",
-        "Version history and backups"
+        "Quick access when you need it",
+        "Turn saves into real actions",
+        "Never lose important links again",
+        "Get things done efficiently"
       ],
       demo: {
-        type: "sync",
+        type: "action",
         visual: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop"
       }
     }
   ];
 
   return (
-    <section id="benefits" className="py-20 bg-gradient-to-b from-background to-background-secondary">
+    <section id="core-capabilities" className="py-20 bg-gradient-to-b from-background to-background-secondary">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-text-primary mb-6">
-            Transform How You
+            Three Steps to Never Losing
             <span className="block text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text">
-              Manage Knowledge
+              Anything Again
             </span>
           </h2>
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto font-inter leading-relaxed">
-            Three powerful capabilities that turn information chaos into organized, searchable knowledge.
+            No complex setup, no manual organizing, no learning curve. Just save, search, and succeed.
           </p>
         </div>
 
@@ -254,6 +254,13 @@ const BenefitsGrid = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-16">
+          <button className="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-2xl font-poppins font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            Start Saving Smarter - Install Free
+          </button>
         </div>
       </div>
     </section>

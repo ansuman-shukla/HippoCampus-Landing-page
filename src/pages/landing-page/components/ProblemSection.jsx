@@ -78,40 +78,8 @@ const ProblemSection = () => {
           ))}
         </div>
 
-        {/* Pain Point Visualization */}
-        <div className="glassmorphism p-8 rounded-2xl text-center">
-          <div className="mb-6">
-            <h3 className="text-2xl font-poppins font-bold text-text-primary mb-4">
-              The Result? Information Chaos
-            </h3>
-            <p className="text-text-secondary font-inter">
-              You end up with scattered bookmarks, unused read-later apps, and the constant feeling that valuable knowledge is slipping away.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-4 bg-error-50 rounded-xl border border-error-100">
-              <Icon name="BookmarkX" size={32} color="var(--color-error)" className="mx-auto mb-2" />
-              <div className="text-2xl font-poppins font-bold text-error mb-1">500+</div>
-              <div className="text-sm text-error font-inter">Unsorted bookmarks</div>
-            </div>
-            
-            <div className="p-4 bg-warning-50 rounded-xl border border-warning-100">
-              <Icon name="Timer" size={32} color="var(--color-warning)" className="mx-auto mb-2" />
-              <div className="text-2xl font-poppins font-bold text-warning mb-1">Hours</div>
-              <div className="text-sm text-warning font-inter">Wasted searching</div>
-            </div>
-            
-            <div className="p-4 bg-error-50 rounded-xl border border-error-100">
-              <Icon name="TrendingDown" size={32} color="var(--color-error)" className="mx-auto mb-2" />
-              <div className="text-2xl font-poppins font-bold text-error mb-1">Lost</div>
-              <div className="text-sm text-error font-inter">Valuable insights</div>
-            </div>
-          </div>
-        </div>
-
         {/* Transition to Solution */}
-        <div className="text-center mt-16">
+        <div className="text-center mb-16">
           <p className="text-xl font-lora italic text-text-secondary mb-4">
             "This isn't your fault. You're not disorganized. The tools just suck."
           </p>
@@ -119,6 +87,71 @@ const ProblemSection = () => {
             <div className="w-2 h-2 bg-text-tertiary rounded-full animate-pulse" />
             <div className="w-2 h-2 bg-text-tertiary rounded-full animate-pulse animation-delay-100" />
             <div className="w-2 h-2 bg-text-tertiary rounded-full animate-pulse animation-delay-200" />
+          </div>
+        </div>
+
+        {/* Impact Section */}
+        <div className="text-center mb-12">
+          <h3 className="text-2xl md:text-3xl font-poppins font-bold text-text-primary mb-8">
+            Here's What It's Actually
+            <span className="block text-transparent bg-gradient-to-r from-error to-warning bg-clip-text">
+              Costing You
+            </span>
+          </h3>
+        </div>
+
+        {/* Cost Cards */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="glassmorphism p-8 rounded-2xl text-center hover:glassmorphism-hover transition-all duration-300 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-error to-error-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <Icon name="BookmarkX" size={32} color="white" />
+            </div>
+            <div className="text-3xl font-poppins font-bold text-error mb-2">500+</div>
+            <div className="text-lg font-poppins font-semibold text-text-primary mb-2">Digital Dead Ends</div>
+            <p className="text-text-secondary font-inter text-sm">
+              Bookmarks and saves that might as well not exist
+            </p>
+          </div>
+          
+          <div className="glassmorphism p-8 rounded-2xl text-center hover:glassmorphism-hover transition-all duration-300 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-warning to-warning-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <Icon name="Timer" size={32} color="white" />
+            </div>
+            <div className="text-3xl font-poppins font-bold text-warning mb-2">5+</div>
+            <div className="text-lg font-poppins font-semibold text-text-primary mb-2">Hours Monthly</div>
+            <p className="text-text-secondary font-inter text-sm">
+              Spent re-searching for things you already found
+            </p>
+          </div>
+          
+          <div className="glassmorphism p-8 rounded-2xl text-center hover:glassmorphism-hover transition-all duration-300 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-error to-warning rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+              <Icon name="TrendingDown" size={32} color="white" />
+            </div>
+            <div className="text-3xl font-poppins font-bold text-transparent bg-gradient-to-r from-error to-warning bg-clip-text mb-2">Countless</div>
+            <div className="text-lg font-poppins font-semibold text-text-primary mb-2">Missed Opportunities</div>
+            <p className="text-text-secondary font-inter text-sm">
+              The perfect job, deal, or idea that slipped through the cracks
+            </p>
+          </div>
+        </div>
+
+        {/* User Quote */}
+        <div className="glassmorphism p-8 rounded-2xl text-center max-w-4xl mx-auto">
+          <div className="mb-6">
+            <Icon name="Quote" size={48} color="var(--color-primary)" className="mx-auto mb-4 opacity-20" />
+            <blockquote className="text-lg md:text-xl font-lora italic text-text-primary leading-relaxed mb-6">
+              "I used to save everything 'for later' but later never came because I could never find anything. I wasn't using my saves—they were just making me feel bad about being disorganized. HippoCampus changed that completely."
+            </blockquote>
+            <div className="flex items-center justify-center space-x-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                <span className="text-white font-poppins font-bold text-lg">A</span>
+              </div>
+              <div className="text-left">
+                <div className="font-poppins font-semibold text-text-primary">Alex R.</div>
+                <div className="text-sm text-text-secondary font-inter">Marketing Manager & Side Hustler</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
