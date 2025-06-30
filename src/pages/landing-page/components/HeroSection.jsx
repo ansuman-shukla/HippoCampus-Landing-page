@@ -115,72 +115,21 @@ const HeroSection = () => {
 
           {/* Right Column - Visual */}
           <div className="relative">
-            {/* Main Glassmorphism Card */}
-            <div className="glassmorphism p-8 rounded-3xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
-              <div className="space-y-6">
-                {/* Search Bar Demo */}
-                <div className="bg-white rounded-xl p-4 shadow-lg">
-                  <div className="flex items-center space-x-3">
-                    <Icon name="Search" size={20} color="var(--color-text-secondary)" />
-                    <div className="flex-1">
-                      <div className="h-4 bg-gradient-to-r from-primary-200 to-secondary-200 rounded animate-pulse" />
-                    </div>
-                  </div>
-                  <div className="mt-3 text-sm text-text-secondary font-inter">
-                    "that article about productivity in remote teams"
-                  </div>
-                </div>
-
-                {/* Search Results Preview */}
-                <div className="space-y-3">
-                  {[
-                    { icon: 'FileText', title: 'Remote Work Productivity Guide', type: 'Article' },
-                    { icon: 'Bookmark', title: 'Team Collaboration Best Practices', type: 'Bookmark' },
-                    { icon: 'StickyNote', title: 'My notes on async communication', type: 'Note' }
-                  ].map((item, index) => (
-                    <div key={index} className="bg-white bg-opacity-50 rounded-lg p-3 border border-border">
-                      <div className="flex items-start space-x-3">
-                        <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                          <Icon name={item.icon} size={16} color="white" />
-                        </div>
-                        <div className="flex-1">
-                          <div className="text-sm font-medium text-text-primary">{item.title}</div>
-                          <div className="text-xs text-text-secondary">{item.type}</div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* AI Badge */}
-                <div className="flex items-center justify-center space-x-2 bg-gradient-to-r from-primary to-secondary rounded-full px-4 py-2">
-                  <Icon name="Brain" size={16} color="white" />
-                  <span className="text-sm font-poppins font-medium text-white">AI Semantic Search</span>
-                </div>
+            {/* YouTube Video Demo */}
+            <div className="glassmorphism p-4 rounded-3xl">
+              <div className="relative">
+                <iframe
+                  className="w-full h-64 md:h-80 lg:h-96 rounded-2xl"
+                  src="https://www.youtube.com/embed/-QTkPfq7w1A"
+                  title="Hippocampus Demo"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
               </div>
             </div>
 
-            {/* Floating Satellite Cards */}
-            <div className="absolute -top-4 -left-4 glassmorphism p-4 rounded-xl transform -rotate-12 hover:rotate-0 transition-transform duration-300">
-              <div className="flex items-center space-x-2">
-                <Icon name="Zap" size={16} color="var(--color-accent)" />
-                <span className="text-sm font-inter text-text-primary">Instant Save</span>
-              </div>
-            </div>
 
-            <div className="absolute -bottom-4 -right-4 glassmorphism p-4 rounded-xl transform rotate-12 hover:rotate-0 transition-transform duration-300">
-              <div className="flex items-center space-x-2">
-                <Icon name="Lightbulb" size={16} color="var(--color-success)" />
-                <span className="text-sm font-inter text-text-primary">Smart Recall</span>
-              </div>
-            </div>
-
-            <div className="absolute top-1/2 -right-8 glassmorphism p-3 rounded-lg transform rotate-6 hover:rotate-0 transition-transform duration-300">
-              <div className="flex items-center space-x-2">
-                <Icon name="Globe" size={14} color="var(--color-secondary)" />
-                <span className="text-xs font-inter text-text-primary">Web Extension</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
