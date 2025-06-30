@@ -5,27 +5,23 @@ const ProblemSection = () => {
   const problems = [
     {
       icon: 'SearchX',
-      title: 'Information Overload',
-      description: 'You consume hundreds of articles, videos, and resources but struggle to find them when you need them most.',
-      stat: '73% of knowledge workers'
+      title: 'The "I Know I Saw This Somewhere" Spiral',
+      description: 'You KNOW you bookmarked that perfect apartment decor idea, but 20 minutes of frantic searching through Instagram saves and browser bookmarks turns up nothing. You settle for something mediocre instead.'
     },
     {
-      icon: 'Clock',
-      title: 'Time Wasted Searching',
-      description: 'Spending 30+ minutes looking for that "perfect article" you bookmarked months ago.',
-      stat: '2.5 hours per week'
+      icon: 'Camera',
+      title: 'The Screenshot Graveyard',
+      description: 'Your camera roll: 1,247 screenshots with zero context. "Was this skincare routine from TikTok or YouTube? What was special about this coffee shop? Why did I save this random tweet?"'
     },
     {
       icon: 'FolderX',
-      title: 'Broken Organization Systems',
-      description: 'Complex folder structures and bookmark systems that nobody actually maintains or uses effectively.',
-      stat: '67% abandon their system'
+      title: 'The Bookmark Black Hole',
+      description: 'Your "Read Later" folder is where good intentions go to die. 500+ unsorted links that feel more like digital hoarding than helpful resources.'
     },
     {
       icon: 'Brain',
-      title: 'Memory Limitations',
-      description: 'Your brain cannot remember every valuable insight, quote, or resource you encounter daily.',
-      stat: '90% is forgotten in 7 days'
+      title: 'The Inspiration Amnesia',
+      description: 'That brilliant business idea from a podcast, that life-changing productivity tip, that tool everyone was raving about—vanished into the scroll before you could act on it.'
     }
   ];
 
@@ -45,15 +41,14 @@ const ProblemSection = () => {
           </div>
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-text-primary mb-6">
-            Your Digital Memory is
+            We Get It. This Happens
             <span className="block text-transparent bg-gradient-to-r from-warning to-error bg-clip-text">
-              Broken
+              Every Day.
             </span>
           </h2>
           
           <p className="text-lg text-text-secondary max-w-3xl mx-auto font-inter leading-relaxed">
-            In our information-rich world, the tools we use to save and organize knowledge are fundamentally flawed. 
-            Here is what every knowledge worker experiences:
+            Your daily frustrations with saving and finding information are valid. You're not alone in this struggle.
           </p>
         </div>
 
@@ -70,14 +65,9 @@ const ProblemSection = () => {
                 </div>
                 
                 <div className="flex-1">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-lg font-poppins font-bold text-text-primary">
-                      {problem.title}
-                    </h3>
-                    <span className="text-sm font-inter font-medium text-warning bg-warning-50 px-2 py-1 rounded-full">
-                      {problem.stat}
-                    </span>
-                  </div>
+                  <h3 className="text-lg font-poppins font-bold text-text-primary mb-3">
+                    {problem.title}
+                  </h3>
                   
                   <p className="text-text-secondary font-inter leading-relaxed">
                     {problem.description}
@@ -123,7 +113,7 @@ const ProblemSection = () => {
         {/* Transition to Solution */}
         <div className="text-center mt-16">
           <p className="text-xl font-lora italic text-text-secondary mb-4">
-            "I know I saved that article somewhere, but where?"
+            "This isn't your fault. You're not disorganized. The tools just suck."
           </p>
           <div className="flex items-center justify-center space-x-2 text-text-tertiary">
             <div className="w-2 h-2 bg-text-tertiary rounded-full animate-pulse" />
