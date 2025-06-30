@@ -7,51 +7,27 @@ const FAQSection = () => {
   const faqs = [
     {
       id: 1,
-      category: "Privacy & Security",
-      question: "How secure is my data with HippoCampus?",
-      answer: `Your data security is our top priority. We use enterprise-grade encryption (AES-256) for all data at rest and in transit. All processing happens locally on your device when possible, and we never sell or share your personal information.\n\nWe're SOC 2 Type II compliant and GDPR ready. You maintain full ownership of your data and can export or delete it at any time. Our privacy-first approach means we only collect what's necessary to provide the service.`
+      category: "Product",
+      question: "How is this different from bookmarks or Notion?",
+      answer: "Bookmarks are just links in folders. Notion requires manual organization. HippoCampus understands what you saved and why it matters, so you can find things the way your brain actually works—by describing what you want, not where you filed it."
     },
     {
       id: 2,
-      category: "AI & Search",
-      question: "How does the AI semantic search actually work?",
-      answer: `Our AI uses advanced natural language processing to understand the meaning and context of your content, not just keywords. When you save an article, we create a semantic fingerprint that captures the core concepts, relationships, and context.\n\nWhen you search using natural language like "that study about remote work productivity," our AI matches your intent with the semantic meaning of your saved content. This allows for much more intuitive and accurate search results compared to traditional keyword matching.`
+      category: "Features",
+      question: "What can I actually save?",
+      answer: "Anything online! TikTok videos, Instagram posts, Amazon products, job listings, Twitter threads, articles, recipes—if you can see it in your browser, you can save it."
     },
     {
       id: 3,
-      category: "Usage & Limits",
-      question: "What counts as a \'save\' in the free plan?",
-      answer: `Each piece of content you save counts as one save - whether it's a web article, PDF, note, or document. The free plan includes 100 saves per month, which resets on your billing date.\n\nSearches are unlimited on all plans. If you exceed your save limit, you can still search your existing content but won't be able to save new items until the next month or until you upgrade to a paid plan.`
+      category: "Security",
+      question: "Is my stuff private and secure?",
+      answer: "100%. Your saves are yours alone. We use bank-level encryption and never share your data. Many Fortune 500 companies trust us with their teams' research."
     },
     {
       id: 4,
-      category: "Browser Extension",
-      question: "Which browsers support the HippoCampus extension?",
-      answer: `We support all major browsers:\n• Chrome (recommended)\n• Firefox\n• Safari\n• Microsoft Edge\n• Brave\n\nThe extension works on both desktop and mobile versions where extensions are supported. We're constantly updating to ensure compatibility with the latest browser versions and security standards.`
-    },
-    {
-      id: 5,
-      category: "Collaboration",
-      question: "Can I share my saved content with team members?",
-      answer: `Yes! Team plans include collaborative workspaces where you can:\n• Share knowledge bases with team members\n• Create collaborative research projects\n• Set permissions for viewing and editing\n• Track team activity and contributions\n\nIndividual Professional plans can share individual items via secure links, but full collaboration features require a Team plan.`
-    },
-    {
-      id: 6,
-      category: "Data Export",
-      question: "Can I export my data if I want to leave?",
-      answer: `Absolutely. We believe in data portability and never want to lock you in. You can export all your data at any time in multiple formats:\n• JSON for technical users\n• CSV for spreadsheet applications\n• HTML for web viewing\n• PDF for archival purposes\n\nExports include all your saved content, tags, notes, and metadata. The process is instant for most accounts and takes just a few minutes for large datasets.`
-    },
-    {
-      id: 7,
-      category: "Billing & Cancellation",
-      question: "How does the free trial work? Can I cancel anytime?",
-      answer: `Our 14-day free trial gives you full access to Professional features with no credit card required. You can upgrade during or after the trial period.\n\nYou can cancel your subscription at any time with no penalties or fees. Your account will remain active until the end of your current billing period, and you'll retain access to all your data. After cancellation, you can still access your content in read-only mode.`
-    },
-    {
-      id: 8,
-      category: "Technical Support",
-      question: "What kind of support do you provide?",
-      answer: `Support varies by plan:\n• Free: Email support with 48-hour response time\n• Professional: Priority email support with 24-hour response\n• Team: Dedicated support with phone/video calls and 4-hour response time\n\nAll plans include access to our comprehensive help center, video tutorials, and community forum. We also offer onboarding assistance for Team plan customers.`
+      category: "Organization",
+      question: "Do I have to organize everything myself?",
+      answer: "Nope! That's the whole point. Our AI organizes and connects things automatically. You just save and search—no folders, no tags, no busywork."
     }
   ];
 
@@ -67,9 +43,9 @@ const FAQSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-text-primary mb-6">
-            Frequently Asked
+            Questions? We've Got
             <span className="block text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text">
-              Questions
+              Answers.
             </span>
           </h2>
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto font-inter leading-relaxed">

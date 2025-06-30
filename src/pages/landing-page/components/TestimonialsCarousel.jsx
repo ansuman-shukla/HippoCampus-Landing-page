@@ -9,63 +9,48 @@ const TestimonialsCarousel = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Dr. Sarah Chen",
-      role: "Research Scientist",
-      company: "Stanford University",
+      name: "Sarah J.",
+      role: "Content Creator & Marketing Consultant",
+      company: "",
       avatar: "https://randomuser.me/api/portraits/women/32.jpg",
-      content: `HippoCampus has revolutionized my research workflow. I used to spend hours trying to find papers I'd bookmarked months ago. Now I just ask 'that study about neural plasticity in adults' and boom - it's there instantly. It's like having a research assistant who never forgets anything.`,
+      content: `I'm a content creator constantly finding inspiration across 6 different platforms. HippoCampus is the only tool that lets me search my saved content like Google searches the internet. Game changer.`,
       rating: 5,
       metrics: {
-        timeSaved: "4.5 hours/week",
-        contentSaved: "2,847 papers"
+        timeSaved: "8+ hours weekly",
+        contentSaved: "Saves 8+ hours weekly"
       },
       verified: true,
-      linkedIn: "https://linkedin.com/in/sarahchen"
+      linkedIn: "https://linkedin.com/in/sarahj"
     },
     {
       id: 2,
-      name: "Marcus Rodriguez",
-      role: "PhD Candidate",
-      company: "MIT",
+      name: "David Chen",
+      role: "Software Engineer & Founder",
+      company: "",
       avatar: "https://randomuser.me/api/portraits/men/45.jpg",
-      content: `As a PhD student drowning in research papers, HippoCampus became my lifeline. The semantic search is incredible - I can find connections between papers I never would have discovered manually. My literature reviews are now 3x faster and more comprehensive.`,
+      content: `My side hustle ideas used to die in random notes apps. Now I save everything in HippoCampus and can actually find my research when I'm ready to build. It's like having a personal research assistant.`,
       rating: 5,
       metrics: {
-        timeSaved: "6 hours/week",
-        contentSaved: "1,923 articles"
+        timeSaved: "2 projects launched",
+        contentSaved: "Launched 2 profitable projects"
       },
       verified: true,
-      linkedIn: "https://linkedin.com/in/marcusrodriguez"
+      linkedIn: "https://linkedin.com/in/davidchen"
     },
     {
       id: 3,
-      name: "Emma Thompson",
-      role: "Content Strategist",
-      company: "TechCorp",
+      name: "Maria Flores",
+      role: "Newsletter Creator",
+      company: "15K subscribers",
       avatar: "https://randomuser.me/api/portraits/women/28.jpg",
-      content: `I manage content research for our entire marketing team. HippoCampus transformed how we organize and retrieve insights. The AI search understands context so well - when I search for 'engagement strategies for Gen Z', it surfaces exactly what I need from hundreds of saved articles.`,
+      content: `I recommend tools in my newsletter but could never remember what I'd already shared. Now I just search 'that AI writing tool from March' and it's right there. My readers love the consistent quality.`,
       rating: 5,
       metrics: {
-        timeSaved: "3.2 hours/week",
-        contentSaved: "1,456 insights"
+        timeSaved: "2x quality boost",
+        contentSaved: "Doubled content quality"
       },
       verified: true,
-      linkedIn: "https://linkedin.com/in/emmathompson"
-    },
-    {
-      id: 4,
-      name: "Prof. David Kim",
-      role: "Associate Professor",
-      company: "Harvard Medical School",
-      avatar: "https://randomuser.me/api/portraits/men/52.jpg",
-      content: `After 15 years in academia, I thought I had my research system figured out. HippoCampus proved me wrong. The ability to search across all my saved content using natural language has uncovered connections I missed for years. It's not just a tool - it's a research multiplier.`,
-      rating: 5,
-      metrics: {
-        timeSaved: "5.1 hours/week",
-        contentSaved: "4,231 papers"
-      },
-      verified: true,
-      linkedIn: "https://linkedin.com/in/davidkim"
+      linkedIn: "https://linkedin.com/in/mariaflores"
     }
   ];
 
@@ -102,13 +87,13 @@ const TestimonialsCarousel = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-text-primary mb-6">
-            Trusted by Researchers
+            Real People,
             <span className="block text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text">
-              Worldwide
+              Real Results
             </span>
           </h2>
           <p className="text-lg md:text-xl text-text-secondary max-w-3xl mx-auto font-inter leading-relaxed">
-            Join thousands of knowledge workers who've transformed their research workflow with AI-powered memory.
+            See how HippoCampus transformed digital chaos into personal goldmines.
           </p>
         </div>
 
@@ -168,18 +153,12 @@ const TestimonialsCarousel = () => {
                 </blockquote>
 
                 {/* Metrics */}
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4">
                   <div className="text-center p-4 bg-success-50 rounded-xl">
-                    <div className="text-xl font-poppins font-bold text-success mb-1">
-                      {current.metrics.timeSaved}
+                    <div className="text-lg md:text-xl font-poppins font-bold text-success mb-1">
+                      📊 {current.metrics.contentSaved}
                     </div>
-                    <div className="text-sm text-text-secondary font-inter">Time Saved</div>
-                  </div>
-                  <div className="text-center p-4 bg-primary-50 rounded-xl">
-                    <div className="text-xl font-poppins font-bold text-primary mb-1">
-                      {current.metrics.contentSaved}
-                    </div>
-                    <div className="text-sm text-text-secondary font-inter">Content Saved</div>
+                    <div className="text-sm text-text-secondary font-inter">Impact Achieved</div>
                   </div>
                 </div>
               </div>
@@ -266,6 +245,59 @@ const TestimonialsCarousel = () => {
             </div>
             <div className="text-text-secondary font-inter text-sm">
               Avg. Time Saved
+            </div>
+          </div>
+        </div>
+
+        {/* Security & Trust Section */}
+        <div className="mt-20 text-center">
+          <h3 className="text-2xl md:text-3xl font-poppins font-bold text-text-primary mb-6">
+            Your Digital Life Stays Private
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
+            <div className="glassmorphism p-4 md:p-6 rounded-2xl">
+              <div className="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-xl flex items-center justify-center">
+                <Icon name="Shield" size={24} color="var(--color-primary)" />
+              </div>
+              <div className="text-sm md:text-base font-poppins font-semibold text-text-primary mb-1">
+                SOC 2
+              </div>
+              <div className="text-xs md:text-sm text-text-secondary font-inter">
+                Type II Compliant
+              </div>
+            </div>
+            <div className="glassmorphism p-4 md:p-6 rounded-2xl">
+              <div className="w-12 h-12 mx-auto mb-3 bg-secondary/10 rounded-xl flex items-center justify-center">
+                <Icon name="Globe" size={24} color="var(--color-secondary)" />
+              </div>
+              <div className="text-sm md:text-base font-poppins font-semibold text-text-primary mb-1">
+                GDPR Compliant
+              </div>
+              <div className="text-xs md:text-sm text-text-secondary font-inter">
+                EU Privacy Ready
+              </div>
+            </div>
+            <div className="glassmorphism p-4 md:p-6 rounded-2xl">
+              <div className="w-12 h-12 mx-auto mb-3 bg-accent/10 rounded-xl flex items-center justify-center">
+                <Icon name="Lock" size={24} color="var(--color-accent)" />
+              </div>
+              <div className="text-sm md:text-base font-poppins font-semibold text-text-primary mb-1">
+                256-bit Encryption
+              </div>
+              <div className="text-xs md:text-sm text-text-secondary font-inter">
+                Military Grade
+              </div>
+            </div>
+            <div className="glassmorphism p-4 md:p-6 rounded-2xl">
+              <div className="w-12 h-12 mx-auto mb-3 bg-success/10 rounded-xl flex items-center justify-center">
+                <Icon name="Activity" size={24} color="var(--color-success)" />
+              </div>
+              <div className="text-sm md:text-base font-poppins font-semibold text-text-primary mb-1">
+                99.9% Uptime
+              </div>
+              <div className="text-xs md:text-sm text-text-secondary font-inter">
+                Always Available
+              </div>
             </div>
           </div>
         </div>
