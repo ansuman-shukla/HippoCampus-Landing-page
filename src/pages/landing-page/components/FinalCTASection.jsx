@@ -73,22 +73,6 @@ const FinalCTASection = () => {
           </p>
         </div>
 
-        {/* Benefits Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="glassmorphism p-4 rounded-xl text-center"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mx-auto mb-3">
-                <Icon name={benefit.icon} size={20} color="white" />
-              </div>
-              <p className="text-text-secondary font-inter text-sm">{benefit.text}</p>
-            </div>
-          ))}
-        </div>
-
         {/* CTA Form */}
         <div className="glassmorphism p-8 md:p-12 rounded-3xl max-w-2xl mx-auto mb-12">
           {!showSuccess ? (
@@ -190,28 +174,6 @@ const FinalCTASection = () => {
           >
             Contact Sales
           </Button>
-        </div>
-
-        {/* Social Proof */}
-        <div className="glassmorphism p-6 rounded-2xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-              <div className="text-2xl font-poppins font-bold text-primary mb-1">50,000+</div>
-              <div className="text-text-secondary font-inter text-sm">Active Users</div>
-            </div>
-            <div>
-              <div className="text-2xl font-poppins font-bold text-secondary mb-1">200+</div>
-              <div className="text-text-secondary font-inter text-sm">Universities</div>
-            </div>
-            <div>
-              <div className="text-2xl font-poppins font-bold text-accent mb-1">500M+</div>
-              <div className="text-text-secondary font-inter text-sm">Items Saved</div>
-            </div>
-            <div>
-              <div className="text-2xl font-poppins font-bold text-success mb-1">4.9/5</div>
-              <div className="text-text-secondary font-inter text-sm">User Rating</div>
-            </div>
-          </div>
         </div>
 
         {/* Trust Badges */}

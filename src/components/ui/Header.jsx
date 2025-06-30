@@ -33,9 +33,6 @@ const Header = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <Icon name="Brain" size={20} color="white" />
-              </div>
               <span className="text-xl font-poppins font-bold text-text-primary">
                 HippoCampus
               </span>

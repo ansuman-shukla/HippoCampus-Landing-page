@@ -318,26 +318,6 @@ const PricingSection = () => {
             </div>
           </div>
         )}
-
-        {/* Trust Badges */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-          <div className="text-center glassmorphism p-4 rounded-xl">
-            <Icon name="Shield" size={24} color="var(--color-success)" className="mx-auto mb-2" />
-            <div className="text-sm font-inter text-text-secondary">SOC 2 Compliant</div>
-          </div>
-          <div className="text-center glassmorphism p-4 rounded-xl">
-            <Icon name="Lock" size={24} color="var(--color-success)" className="mx-auto mb-2" />
-            <div className="text-sm font-inter text-text-secondary">GDPR Ready</div>
-          </div>
-          <div className="text-center glassmorphism p-4 rounded-xl">
-            <Icon name="Database" size={24} color="var(--color-success)" className="mx-auto mb-2" />
-            <div className="text-sm font-inter text-text-secondary">256-bit Encryption</div>
-          </div>
-          <div className="text-center glassmorphism p-4 rounded-xl">
-            <Icon name="Clock" size={24} color="var(--color-success)" className="mx-auto mb-2" />
-            <div className="text-sm font-inter text-text-secondary">99.9% Uptime</div>
-          </div>
-        </div>
       </div>
     </section>
   );
