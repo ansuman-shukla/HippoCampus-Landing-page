@@ -120,7 +120,7 @@ const TestimonialsCarousel = () => {
         </div>
 
         {/* Social Proof Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
           <div className="text-center glassmorphism p-6 rounded-2xl">
             <div className="text-2xl md:text-3xl font-poppins font-bold text-primary mb-2">
               10,000+
@@ -138,19 +138,11 @@ const TestimonialsCarousel = () => {
             </div>
           </div>
           <div className="text-center glassmorphism p-6 rounded-2xl">
-            <div className="text-2xl md:text-3xl font-poppins font-bold text-accent mb-2">
+            <div className="text-2xl md:text-3xl font-poppins font-bold text-success mb-2">
               4.9/5
             </div>
             <div className="text-text-secondary font-inter text-sm">
               Average Rating
-            </div>
-          </div>
-          <div className="text-center glassmorphism p-6 rounded-2xl">
-            <div className="text-2xl md:text-3xl font-poppins font-bold text-success mb-2">
-              3.5hrs
-            </div>
-            <div className="text-text-secondary font-inter text-sm">
-              Avg. Time Saved
             </div>
           </div>
         </div>
