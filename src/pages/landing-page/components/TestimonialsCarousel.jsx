@@ -1,82 +1,55 @@
 import React, { useState, useEffect } from 'react';
 import Icon from '../../../components/AppIcon';
-import Image from '../../../components/AppImage';
 
 const TestimonialsCarousel = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   const testimonials = [
     {
       id: 1,
-      name: "Sarah J.",
-      role: "Content Creator & Marketing Consultant",
-      company: "",
-      avatar: "https://randomuser.me/api/portraits/women/32.jpg",
-      content: `I'm a content creator constantly finding inspiration across 6 different platforms. HippoCampus is the only tool that lets me search my saved content like Google searches the internet. Game changer.`,
-      rating: 5,
-      metrics: {
-        timeSaved: "8+ hours weekly",
-        contentSaved: "Saves 8+ hours weekly"
-      },
-      verified: true,
-      linkedIn: "https://linkedin.com/in/sarahj"
+      content: "I used to save everything 'for later' but later never came because I could never find anything. I wasn't using my saves—they were just making me feel bad about being disorganized. HippoCampus changed that completely.",
+      author: "Sarah",
+      role: "Content Creator"
     },
     {
       id: 2,
-      name: "David Chen",
-      role: "Software Engineer & Founder",
-      company: "",
-      avatar: "https://randomuser.me/api/portraits/men/45.jpg",
-      content: `My side hustle ideas used to die in random notes apps. Now I save everything in HippoCampus and can actually find my research when I'm ready to build. It's like having a personal research assistant.`,
-      rating: 5,
-      metrics: {
-        timeSaved: "2 projects launched",
-        contentSaved: "Launched 2 profitable projects"
-      },
-      verified: true,
-      linkedIn: "https://linkedin.com/in/davidchen"
+      content: "As a researcher, I collect hundreds of papers and articles. HippoCampus's AI search finds exactly what I need from my vast collection. It's like having a research assistant that never forgets.",
+      author: "Dr. Michael Chen",
+      role: "Research Scientist"
     },
     {
       id: 3,
-      name: "Maria Flores",
-      role: "Newsletter Creator",
-      company: "15K subscribers",
-      avatar: "https://randomuser.me/api/portraits/women/28.jpg",
-      content: `I recommend tools in my newsletter but could never remember what I'd already shared. Now I just search 'that AI writing tool from March' and it's right there. My readers love the consistent quality.`,
-      rating: 5,
-      metrics: {
-        timeSaved: "2x quality boost",
-        contentSaved: "Doubled content quality"
-      },
-      verified: true,
-      linkedIn: "https://linkedin.com/in/mariaflores"
+      content: "My newsletter audience loves the curated content I share. HippoCampus helps me remember which tools I've already recommended and discover new gems from my saved content.",
+      author: "Maria Rodriguez",
+      role: "Newsletter Creator"
+    },
+    {
+      id: 4,
+      content: "Building my startup, I save tons of inspiration and resources. HippoCampus turns my scattered bookmarks into an organized knowledge base that actually helps me execute ideas.",
+      author: "David Kim",
+      role: "Startup Founder"
     }
   ];
 
+  // Auto-scroll functionality
   useEffect(() => {
-    if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
+    }, 5000); // Change testimonial every 5 seconds
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying, testimonials.length]);
+  }, [testimonials.length]);
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    setIsAutoPlaying(false);
   };
 
   const prevTestimonial = () => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-    setIsAutoPlaying(false);
   };
 
   const goToTestimonial = (index) => {
     setCurrentTestimonial(index);
-    setIsAutoPlaying(false);
   };
 
   const current = testimonials[currentTestimonial];
@@ -97,70 +70,16 @@ const TestimonialsCarousel = () => {
           </p>
         </div>
 
-        {/* Main Testimonial */}
-        <div className="relative">
-          <div className="glassmorphism p-8 md:p-12 rounded-3xl max-w-4xl mx-auto">
-            <div className="grid md:grid-cols-3 gap-8 items-center">
-              {/* Avatar & Profile */}
-              <div className="text-center md:text-left">
-                <div className="relative inline-block mb-4">
-                  <Image
-                    src={current.avatar}
-                    alt={`${current.name} profile picture`}
-                    className="w-24 h-24 rounded-full object-cover mx-auto md:mx-0"
-                  />
-                  {current.verified && (
-                    <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-primary rounded-full flex items-center justify-center border-2 border-white">
-                      <Icon name="Check" size={16} color="white" />
-                    </div>
-                  )}
-                </div>
-                
-                <h4 className="text-lg font-poppins font-bold text-text-primary mb-1">
-                  {current.name}
-                </h4>
-                <p className="text-text-secondary font-inter text-sm mb-1">
-                  {current.role}
-                </p>
-                <p className="text-text-secondary font-inter text-sm mb-4">
-                  {current.company}
-                </p>
-
-                {/* LinkedIn Verification */}
-                <a
-                  href={current.linkedIn}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 text-primary hover:text-secondary transition-colors"
-                >
-                  <Icon name="Linkedin" size={16} />
-                  <span className="text-sm font-inter">Verified Profile</span>
-                </a>
-              </div>
-
-              {/* Testimonial Content */}
-              <div className="md:col-span-2">
-                {/* Rating */}
-                <div className="flex items-center justify-center md:justify-start space-x-1 mb-4">
-                  {Array.from({ length: current.rating }).map((_, index) => (
-                    <Icon key={index} name="Star" size={20} color="white" />
-                  ))}
-                </div>
-
-                {/* Quote */}
-                <blockquote className="text-text-primary font-lora text-lg md:text-xl leading-relaxed mb-6 italic">
-                  "{current.content}"
-                </blockquote>
-
-                {/* Metrics */}
-                <div className="grid grid-cols-1 gap-4">
-                  <div className="text-center p-4 bg-success-50 rounded-xl">
-                    <div className="text-lg md:text-xl font-poppins font-bold text-success mb-1">
-                      📊 {current.metrics.contentSaved}
-                    </div>
-                    <div className="text-sm text-text-secondary font-inter">Impact Achieved</div>
-                  </div>
-                </div>
+        {/* Single Testimonial Carousel */}
+        <div className="relative max-w-4xl mx-auto">
+          <div className="glassmorphism p-8 rounded-2xl text-center">
+            <div className="mb-6">
+              <Icon name="Quote" size={48} className="mx-auto mb-4 opacity-20" color="white" />
+              <blockquote className="text-lg md:text-xl font-lora italic text-text-primary leading-relaxed mb-6">
+                "{current.content}"
+              </blockquote>
+              <div className="text-sm text-text-secondary">
+                — {current.author}, {current.role}
               </div>
             </div>
           </div>
@@ -169,7 +88,7 @@ const TestimonialsCarousel = () => {
           <div className="flex items-center justify-center space-x-4 mt-8">
             <button
               onClick={prevTestimonial}
-              className="w-12 h-12 glassmorphism rounded-full flex items-center justify-center glassmorphism-hover transition-glassmorphism"
+              className="w-12 h-12 glassmorphism rounded-full flex items-center justify-center hover:bg-primary/20 transition-all duration-300"
               aria-label="Previous testimonial"
             >
               <Icon name="ChevronLeft" size={20} color="white" />
@@ -183,7 +102,7 @@ const TestimonialsCarousel = () => {
                   onClick={() => goToTestimonial(index)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     index === currentTestimonial 
-                      ? 'bg-primary w-8' :'bg-text-tertiary hover:bg-text-secondary'
+                      ? 'bg-primary w-8' : 'bg-text-tertiary hover:bg-text-secondary'
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
                 />
@@ -192,23 +111,10 @@ const TestimonialsCarousel = () => {
 
             <button
               onClick={nextTestimonial}
-              className="w-12 h-12 glassmorphism rounded-full flex items-center justify-center glassmorphism-hover transition-glassmorphism"
+              className="w-12 h-12 glassmorphism rounded-full flex items-center justify-center hover:bg-primary/20 transition-all duration-300"
               aria-label="Next testimonial"
             >
               <Icon name="ChevronRight" size={20} color="white" />
-            </button>
-          </div>
-
-          {/* Auto-play Toggle */}
-          <div className="text-center mt-4">
-            <button
-              onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className="inline-flex items-center space-x-2 text-text-secondary hover:text-primary transition-colors"
-            >
-              <Icon name={isAutoPlaying ? "Pause" : "Play"} size={16} />
-              <span className="text-sm font-inter">
-                {isAutoPlaying ? "Pause" : "Play"} Auto-rotation
-              </span>
             </button>
           </div>
         </div>
@@ -217,10 +123,10 @@ const TestimonialsCarousel = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
           <div className="text-center glassmorphism p-6 rounded-2xl">
             <div className="text-2xl md:text-3xl font-poppins font-bold text-primary mb-2">
-              50,000+
+              10,000+
             </div>
             <div className="text-text-secondary font-inter text-sm">
-              Active Researchers
+              Active Users
             </div>
           </div>
           <div className="text-center glassmorphism p-6 rounded-2xl">

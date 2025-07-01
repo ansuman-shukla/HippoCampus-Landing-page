@@ -21,22 +21,26 @@ const PricingSection = () => {
       limitations: [
         'Basic search only',
         'Limited to single device',
-        'No team features'
+        'No team features',
+        '100 memory creation limit',
+        'AI content summarization'
       ],
       cta: 'Start Free',
       popular: false,
-      color: 'from-text-secondary to-text-tertiary'
+      color: 'text-secondary'
     },
     {
       id: 'pro',
       name: 'Standard',
-      price: { monthly: 12, yearly: 120 },
+      price: { monthly: 4, yearly: 40 },
       description: 'For serious knowledge workers',
       features: [
         'Everything in Free',
         'Advanced AI semantic search',
         'Cross-device sync',
+        'Unlimited memory creation',
         'AI content summarization',
+        'Site summarization',
         'Dashboard & AI support',
         'PDF and document analysis',
         'Export and backup options'
@@ -44,12 +48,12 @@ const PricingSection = () => {
       limitations: [],
       cta: 'Start Free Trial',
       popular: true,
-      color: 'from-primary to-secondary'
+      color: 'primary'
     },
     {
       id: 'team',
       name: 'Team',
-      price: { monthly: 25, yearly: 250 },
+      price: { monthly: 8, yearly: 80 },
       description: 'Collaborative research teams',
       features: [
         'Everything in Standard',
@@ -64,7 +68,7 @@ const PricingSection = () => {
       limitations: [],
       cta: 'Contact Sales',
       popular: false,
-      color: 'from-accent to-warning'
+      color: 'accent'
     }
   ];
 
@@ -75,7 +79,9 @@ const PricingSection = () => {
         { name: 'Search functionality', free: 'Basic', pro: 'Advanced AI semantic', team: 'Advanced AI semantic' },
         { name: 'Browser extension', free: '✓', pro: '✓', team: '✓' },
         { name: 'Device sync', free: 'Single device', pro: 'Cross-device', team: 'Cross-device' },
+        { name: 'Memory creation limit', free: '100 memories', pro: 'Unlimited', team: 'Unlimited' },
         { name: 'AI content summarization', free: '✗', pro: '✓', team: '✓' },
+        { name: 'Site summarization', free: '✗', pro: '✓', team: '✓' },
         { name: 'PDF analysis', free: '✗', pro: '✓', team: '✓' }
       ]
     },
@@ -121,13 +127,13 @@ const PricingSection = () => {
   };
 
   return (
-    <section id="pricing" className="py-20 bg-gradient-to-b from-background to-background-secondary">
+    <section id="pricing" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-poppins font-bold text-text-primary mb-6">
             Choose Your
-            <span className="block text-transparent bg-gradient-to-r from-primary to-secondary bg-clip-text">
+            <span className="block text-primary">
               Knowledge Plan
             </span>
           </h2>
@@ -175,7 +181,7 @@ const PricingSection = () => {
                 {/* Popular Badge */}
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-primary to-secondary px-6 py-2 rounded-full">
+                    <div className="bg-primary px-6 py-2 rounded-full">
                       <span className="text-white text-sm font-poppins font-semibold">
                         Most Popular
                       </span>

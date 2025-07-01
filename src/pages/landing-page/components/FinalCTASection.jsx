@@ -51,7 +51,7 @@ const FinalCTASection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-primary-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-background to-background-secondary relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-primary-300 to-secondary-300 rounded-full opacity-10 blur-xl animate-pulse" />

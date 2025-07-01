@@ -71,7 +71,13 @@ const HeroSection = () => {
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-text-secondary mb-8 max-w-2xl font-inter leading-relaxed">
-              That perfect product you saw on TikTok? The career advice from that Twitter thread? The recipe that actually looked doable? They're lost somewhere in your digital chaos. It's time for a second brain that actually works.
+              That perfect product you saw on TikTok? 
+              <br />
+              The career advice from that Twitter thread? 
+              <br />
+              The recipe that actually looked doable? 
+              <br />
+              They're lost somewhere in your digital chaos. It's time for a second brain that actually works.
             </p>
 
             {/* User Status Message */}
@@ -96,20 +102,6 @@ const HeroSection = () => {
               >
                 Never Lose Cool Stuff Again - Install Free
               </Button>
-              
-              {/* Social Proof */}
-              <div className="flex items-center justify-center lg:justify-start space-x-2 text-text-secondary">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full border-2 border-white flex items-center justify-center">
-                      <Icon name="User" size={14} color="white" />
-                    </div>
-                  ))}
-                </div>
-                <span className="text-sm font-inter ml-3">
-                  Join 50,000+ people who finally got their digital life together
-                </span>
-              </div>
             </div>
           </div>
 

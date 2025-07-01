@@ -143,15 +143,6 @@ const ProblemSection = () => {
             <blockquote className="text-lg md:text-xl font-lora italic text-text-primary leading-relaxed mb-6">
               "I used to save everything 'for later' but later never came because I could never find anything. I wasn't using my saves—they were just making me feel bad about being disorganized. HippoCampus changed that completely."
             </blockquote>
-            <div className="flex items-center justify-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                <span className="text-white font-poppins font-bold text-lg">A</span>
-              </div>
-              <div className="text-left">
-                <div className="font-poppins font-semibold text-text-primary">Alex R.</div>
-                <div className="text-sm text-text-secondary font-inter">Marketing Manager & Side Hustler</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

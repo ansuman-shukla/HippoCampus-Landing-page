@@ -62,7 +62,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-background-secondary to-text-primary text-white relative overflow-hidden">
+    <footer className="bg-gradient-to-b from-background-secondary to-background text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 w-20 h-20 border border-white rounded-full" />
@@ -78,14 +78,6 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center">
-                    <Icon name="Brain" size={24} color="white" strokeWidth={2} />
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-accent rounded-full flex items-center justify-center">
-                    <Icon name="Sparkles" size={10} color="white" strokeWidth={2} />
-                  </div>
-                </div>
                 <div>
                   <h3 className="text-xl font-poppins font-bold">HippoCampus</h3>
                   <p className="text-sm opacity-80 font-inter">AI Memory Assistant</p>
