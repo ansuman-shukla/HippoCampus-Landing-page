@@ -8,17 +8,17 @@ module.exports = {
     extend: {
       colors: {
         // Primary Colors - Lime Green for H1 Headings
-        'primary': '#BED754', // lime green
-        'primary-50': '#F4F9E8', // very light lime
-        'primary-100': '#E8F2D1', // light lime
-        'primary-200': '#D1E5A3', // lighter lime
-        'primary-300': '#BED754', // main lime green
-        'primary-400': '#A8C63F', // darker lime
-        'primary-500': '#BED754', // lime green
-        'primary-600': '#9BB52A', // darker lime
-        'primary-700': '#7A9215', // dark lime
-        'primary-800': '#596E00', // very dark lime
-        'primary-900': '#3A4A00', // darkest lime
+        'primary': '#B6F500', // lime green
+        'primary-50': '#F5FDD9', // very light lime
+        'primary-100': '#ECFBB3', // light lime
+        'primary-200': '#DAF766', // lighter lime
+        'primary-300': '#B6F500', // main lime green
+        'primary-400': '#9AD500', // darker lime
+        'primary-500': '#B6F500', // lime green
+        'primary-600': '#7FB300', // darker lime
+        'primary-700': '#639100', // dark lime
+        'primary-800': '#476F00', // very dark lime
+        'primary-900': '#2B4D00', // darkest lime
         'primary-foreground': '#000000', // black text on lime
 
         // Secondary Colors - Burnt Orange for H2 & Links

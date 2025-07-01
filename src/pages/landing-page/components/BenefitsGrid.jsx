@@ -203,7 +203,7 @@ const BenefitsGrid = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <button className="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-2xl font-poppins font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          <button className="bg-primary text-black px-8 py-4 rounded-2xl font-poppins font-semibold text-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
             Start Saving Smarter - Install Free
           </button>
         </div>

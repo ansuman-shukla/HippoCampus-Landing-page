@@ -80,7 +80,7 @@ const FAQSection = () => {
               >
                 <div className="flex-1 pr-4">
                   <div className="flex items-center space-x-3 mb-2">
-                    <span className="px-3 py-1 bg-primary-50 text-primary text-xs rounded-full font-inter">
+                    <span className="px-3 py-1 bg-black text-primary text-xs rounded-full font-inter">
                       {faq.category}
                     </span>
                   </div>

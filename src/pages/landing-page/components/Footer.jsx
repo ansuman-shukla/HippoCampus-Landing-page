@@ -145,7 +145,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg text-white placeholder-white placeholder-opacity-60 focus:outline-none focus:border-primary font-inter"
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-primary to-secondary rounded-lg font-poppins font-medium text-white hover:shadow-primary transition-all duration-300">
+              <button className="px-6 py-3 bg-primary rounded-lg font-poppins font-medium text-black hover:shadow-primary transition-all duration-300">
                 Subscribe
               </button>
             </div>
