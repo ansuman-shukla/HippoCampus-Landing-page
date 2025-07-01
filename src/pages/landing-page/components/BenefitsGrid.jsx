@@ -4,6 +4,20 @@ import Image from '../../../components/AppImage';
 
 const BenefitsGrid = () => {
   const [activeBenefit, setActiveBenefit] = useState(0);
+  const [flippedCards, setFlippedCards] = useState(new Set());
+
+  const handleCardClick = (index) => {
+    setActiveBenefit(index);
+    setFlippedCards(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
+  };
 
   const benefits = [
     {
@@ -21,7 +35,9 @@ const BenefitsGrid = () => {
       ],
       demo: {
         type: "extension",
-        visual: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop"
+        visual: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop",
+        title: "One-Click Save Extension",
+        description: "Save anything from any website with just one click. Our browser extension works seamlessly across all platforms."
       }
     },
     {
@@ -39,7 +55,9 @@ const BenefitsGrid = () => {
       ],
       demo: {
         type: "search",
-        visual: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
+        visual: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+        title: "Smart Natural Language Search",
+        description: "Ask in plain English and find exactly what you're looking for. Our AI understands context and intent."
       }
     },
     {
@@ -57,7 +75,9 @@ const BenefitsGrid = () => {
       ],
       demo: {
         type: "action",
-        visual: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop"
+        visual: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+        title: "Turn Saves Into Action",
+        description: "Access your saved content when you need it most. Take action on important items and get things done."
       }
     }
   ];
@@ -83,52 +103,98 @@ const BenefitsGrid = () => {
           {benefits.map((benefit, index) => (
             <div
               key={benefit.id}
-              className={`glassmorphism p-8 rounded-3xl cursor-pointer transition-all duration-300 ${
-                activeBenefit === index 
-                  ? 'transform scale-105 shadow-2xl' 
-                  : 'hover:transform hover:scale-102'
-              }`}
-              onClick={() => setActiveBenefit(index)}
+              className="h-[600px] cursor-pointer"
+              onClick={() => handleCardClick(index)}
             >
-              {/* Benefit Header */}
-              <div className="text-center mb-6">
-                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <Icon name={benefit.icon} size={32} color="white" />
-                </div>
-                <h3 className="text-xl font-poppins font-bold text-text-primary mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-text-secondary font-inter text-sm">
-                  {benefit.subtitle}
-                </p>
-              </div>
-
-              {/* Benefit Description */}
-              <p className="text-text-secondary font-inter text-center mb-6 leading-relaxed">
-                {benefit.description}
-              </p>
-
-              {/* Feature List */}
-              <div className="space-y-3">
-                {benefit.features.map((feature, featureIndex) => (
-                  <div key={featureIndex} className="flex items-start space-x-3">
-                    <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center mt-0.5">
-                      <Icon name="Check" size={12} color="black" />
+              <div 
+                className={`relative w-full h-full transition-all duration-700 ${
+                  activeBenefit === index 
+                    ? 'scale-105 shadow-2xl' 
+                    : 'hover:scale-102'
+                }`}
+                style={{ 
+                  transformStyle: 'preserve-3d',
+                  transform: flippedCards.has(index) ? 'rotateY(180deg)' : 'rotateY(0deg)'
+                }}
+              >
+                {/* Front Side */}
+                <div 
+                  className="absolute inset-0 w-full h-full glassmorphism p-6 rounded-3xl flex flex-col"
+                  style={{ backfaceVisibility: 'hidden' }}
+                >
+                  {/* Benefit Header */}
+                  <div className="text-center mb-6 flex-shrink-0">
+                    <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                      <Icon name={benefit.icon} size={32} color="white" />
                     </div>
-                    <span className="text-text-secondary font-inter text-sm">{feature}</span>
+                    <h3 className="text-xl font-poppins font-bold text-text-primary mb-2 leading-tight">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-text-secondary font-inter text-sm">
+                      {benefit.subtitle}
+                    </p>
                   </div>
-                ))}
-              </div>
 
-              {/* Active Indicator */}
-              {activeBenefit === index && (
-                <div className="mt-6 pt-6 border-t border-border">
-                  <div className="flex items-center justify-center space-x-2 text-primary">
-                    <Icon name="Eye" size={16} />
-                    <span className="text-sm font-inter font-medium">View Demo</span>
+                  {/* Benefit Description */}
+                  <p className="text-text-secondary font-inter text-center mb-6 leading-relaxed text-base flex-shrink-0">
+                    {benefit.description}
+                  </p>
+
+                  {/* Feature List - Fill remaining space */}
+                  <div className="flex-1 flex flex-col justify-center">
+                    <div className="space-y-4">
+                      {benefit.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-start space-x-3">
+                          <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                            <Icon name="Check" size={12} color="black" />
+                          </div>
+                          <span className="text-text-secondary font-inter text-sm leading-relaxed">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Click to flip indicator */}
+                  <div className="mt-6 pt-4 border-t border-border/30 flex-shrink-0">
+                    <div className="flex items-center justify-center space-x-2 text-primary/70">
+                      <Icon name="Eye" size={16} />
+                      <span className="text-sm font-inter">Click to see demo</span>
+                    </div>
                   </div>
                 </div>
-              )}
+
+                {/* Back Side */}
+                <div 
+                  className="absolute inset-0 w-full h-full glassmorphism p-6 rounded-3xl"
+                  style={{ 
+                    backfaceVisibility: 'hidden',
+                    transform: 'rotateY(180deg)'
+                  }}
+                >
+                  <div className="h-full flex flex-col items-center justify-center text-center">
+                    {/* Square Image Container */}
+                    <div className="w-56 h-56 mb-4 rounded-xl overflow-hidden flex-shrink-0 shadow-lg">
+                      <Image
+                        src={benefit.demo.visual}
+                        alt={benefit.demo.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h4 className="text-lg font-poppins font-bold text-text-primary mb-3 line-clamp-2">
+                      {benefit.demo.title}
+                    </h4>
+                    <p className="text-text-secondary font-inter text-sm leading-relaxed mb-6 max-w-xs line-clamp-3">
+                      {benefit.demo.description}
+                    </p>
+                    
+                    {/* Back to front indicator */}
+                    <div className="flex items-center justify-center space-x-2 text-primary/70 mt-auto">
+                      <Icon name="ArrowLeft" size={16} />
+                      <span className="text-sm font-inter">Click to go back</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
         </div>
