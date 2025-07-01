@@ -92,7 +92,7 @@ const BenefitsGrid = () => {
             >
               {/* Benefit Header */}
               <div className="text-center mb-6">
-                <div className={`w-16 h-16 bg-gradient-to-br ${benefit.color} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg`}>
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <Icon name={benefit.icon} size={32} color="white" />
                 </div>
                 <h3 className="text-xl font-poppins font-bold text-text-primary mb-2">
@@ -112,8 +112,8 @@ const BenefitsGrid = () => {
               <div className="space-y-3">
                 {benefit.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-start space-x-3">
-                    <div className="w-5 h-5 bg-success-100 rounded-full flex items-center justify-center mt-0.5">
-                      <Icon name="Check" size={12} color="var(--color-success)" />
+                    <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center mt-0.5">
+                      <Icon name="Check" size={12} color="black" />
                     </div>
                     <span className="text-text-secondary font-inter text-sm">{feature}</span>
                   </div>

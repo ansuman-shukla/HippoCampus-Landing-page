@@ -58,7 +58,7 @@ const Header = () => {
             <div className="hidden md:flex items-center space-x-4">
               {loading ? (
                 <div className="w-8 h-8 animate-spin">
-                  <Icon name="Loader2" size={20} color="var(--color-primary)" />
+                  <Icon name="Loader2" size={20} color="white" />
                 </div>
               ) : user ? (
                 <div className="flex items-center space-x-4">
@@ -79,23 +79,14 @@ const Header = () => {
                   </Button>
                 </div>
               ) : (
-                <>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setShowLoginModal(true)}
-                  >
-                    Sign In
-                  </Button>
-                  <Button
-                    variant="primary"
-                    size="sm"
-                    onClick={() => setShowSignupModal(true)}
-                    className="primary-shadow hover:cta-shadow"
-                  >
-                    Stop Losing Cool Stuff - Try Free
-                  </Button>
-                </>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setShowLoginModal(true)}
+                  className="bg-gradient-to-r from-primary/20 to-secondary/20 border border-primary/30 shadow-lg shadow-primary/50 hover:bg-[#B6F500] hover:border-[#B6F500] hover:shadow-xl hover:shadow-[#B6F500]/60 transition-all duration-300"
+                >
+                  Join now
+                </Button>
               )}
             </div>
 
@@ -104,7 +95,7 @@ const Header = () => {
               className="md:hidden p-2 rounded-lg glassmorphism-hover"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <Icon name={isMenuOpen ? "X" : "Menu"} size={20} color="var(--color-text-primary)" />
+              <Icon name={isMenuOpen ? "X" : "Menu"} size={20} color="white" />
             </button>
           </div>
 
@@ -128,7 +119,7 @@ const Header = () => {
                 <div className="border-t border-border pt-4">
                   {loading ? (
                     <div className="flex justify-center">
-                      <Icon name="Loader2" size={20} color="var(--color-primary)" />
+                      <Icon name="Loader2" size={20} color="white" />
                     </div>
                   ) : user ? (
                     <div className="space-y-4">
@@ -150,31 +141,17 @@ const Header = () => {
                       </Button>
                     </div>
                   ) : (
-                    <div className="space-y-3">
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        fullWidth
-                        onClick={() => {
-                          setShowLoginModal(true);
-                          setIsMenuOpen(false);
-                        }}
-                      >
-                        Sign In
-                      </Button>
-                      <Button
-                        variant="primary"
-                        size="sm"
-                        fullWidth
-                        onClick={() => {
-                          setShowSignupModal(true);
-                          setIsMenuOpen(false);
-                        }}
-                        className="primary-shadow hover:cta-shadow"
-                      >
-                        Stop Losing Cool Stuff - Try Free
-                      </Button>
-                    </div>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      fullWidth
+                      onClick={() => {
+                        setShowLoginModal(true);
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      Sign In
+                    </Button>
                   )}
                 </div>
               </nav>

@@ -7,84 +7,93 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Primary Colors
-        'primary': '#6366F1', // indigo-500
-        'primary-50': '#EEF2FF', // indigo-50
-        'primary-100': '#E0E7FF', // indigo-100
-        'primary-200': '#C7D2FE', // indigo-200
-        'primary-300': '#A5B4FC', // indigo-300
-        'primary-400': '#818CF8', // indigo-400
-        'primary-500': '#6366F1', // indigo-500
-        'primary-600': '#4F46E5', // indigo-600
-        'primary-700': '#4338CA', // indigo-700
-        'primary-800': '#3730A3', // indigo-800
-        'primary-900': '#312E81', // indigo-900
-        'primary-foreground': '#FFFFFF', // white
+        // Primary Colors - Lime Green for H1 Headings
+        'primary': '#BED754', // lime green
+        'primary-50': '#F4F9E8', // very light lime
+        'primary-100': '#E8F2D1', // light lime
+        'primary-200': '#D1E5A3', // lighter lime
+        'primary-300': '#BED754', // main lime green
+        'primary-400': '#A8C63F', // darker lime
+        'primary-500': '#BED754', // lime green
+        'primary-600': '#9BB52A', // darker lime
+        'primary-700': '#7A9215', // dark lime
+        'primary-800': '#596E00', // very dark lime
+        'primary-900': '#3A4A00', // darkest lime
+        'primary-foreground': '#000000', // black text on lime
 
-        // Secondary Colors
-        'secondary': '#8B5CF6', // violet-500
-        'secondary-50': '#F5F3FF', // violet-50
-        'secondary-100': '#EDE9FE', // violet-100
-        'secondary-200': '#DDD6FE', // violet-200
-        'secondary-300': '#C4B5FD', // violet-300
-        'secondary-400': '#A78BFA', // violet-400
-        'secondary-500': '#8B5CF6', // violet-500
-        'secondary-600': '#7C3AED', // violet-600
-        'secondary-700': '#6D28D9', // violet-700
-        'secondary-800': '#5B21B6', // violet-800
-        'secondary-900': '#4C1D95', // violet-900
-        'secondary-foreground': '#FFFFFF', // white
+        // Secondary Colors - Burnt Orange for H2 & Links
+        'secondary': '#E3651D', // burnt orange
+        'secondary-50': '#FDF5F0', // very light orange
+        'secondary-100': '#FBEAE1', // light orange
+        'secondary-200': '#F7D5C3', // lighter orange
+        'secondary-300': '#F3C0A5', // light burnt orange
+        'secondary-400': '#EFAB87', // medium burnt orange
+        'secondary-500': '#E3651D', // main burnt orange
+        'secondary-600': '#C8551A', // darker burnt orange
+        'secondary-700': '#AD4517', // dark burnt orange
+        'secondary-800': '#923514', // darker orange
+        'secondary-900': '#772511', // darkest orange
+        'secondary-foreground': '#FFFFFF', // white text on orange
 
-        // Accent Colors
-        'accent': '#F59E0B', // amber-500
-        'accent-50': '#FFFBEB', // amber-50
-        'accent-100': '#FEF3C7', // amber-100
-        'accent-200': '#FDE68A', // amber-200
-        'accent-300': '#FCD34D', // amber-300
-        'accent-400': '#FBBF24', // amber-400
-        'accent-500': '#F59E0B', // amber-500
-        'accent-600': '#D97706', // amber-600
-        'accent-700': '#B45309', // amber-700
-        'accent-800': '#92400E', // amber-800
-        'accent-900': '#78350F', // amber-900
-        'accent-foreground': '#FFFFFF', // white
+        // Accent Colors - Deep Burgundy for Subtle Accents
+        'accent': '#750E21', // deep burgundy
+        'accent-50': '#F5E8EB', // very light burgundy
+        'accent-100': '#EBD1D7', // light burgundy
+        'accent-200': '#D7A3AF', // lighter burgundy
+        'accent-300': '#C37587', // medium burgundy
+        'accent-400': '#AF475F', // darker burgundy
+        'accent-500': '#750E21', // main deep burgundy
+        'accent-600': '#5C0B1A', // darker burgundy
+        'accent-700': '#430813', // dark burgundy
+        'accent-800': '#2A050C', // very dark burgundy
+        'accent-900': '#110205', // darkest burgundy
+        'accent-foreground': '#FFFFFF', // white text on burgundy
 
         // Background Colors
-        'background': '#F8FAFC', // slate-50
-        'background-secondary': '#F1F5F9', // slate-100
-        'background-tertiary': '#E2E8F0', // slate-200
+        'background': '#000000', // main black background
+        'background-secondary': '#111111', // slightly lighter black
+        'background-tertiary': '#1a1a1a', // dark gray for sections
 
-        // Surface Colors
-        'surface': 'rgba(255, 255, 255, 0.25)', // glassmorphism surface
-        'surface-hover': 'rgba(255, 255, 255, 0.35)', // glassmorphism surface hover
-        'surface-active': 'rgba(255, 255, 255, 0.45)', // glassmorphism surface active
+        // Surface Colors - Card Backgrounds
+        'surface': '#222222', // dark grey cards
+        'surface-hover': '#2a2a2a', // slightly lighter on hover
+        'surface-active': '#333333', // lighter on active
 
         // Text Colors
-        'text-primary': '#111827', // gray-900
-        'text-secondary': '#6B7280', // gray-500
-        'text-tertiary': '#9CA3AF', // gray-400
-        'text-inverse': '#FFFFFF', // white
+        'text-primary': '#F1F1F1', // off-white for H3+ & body text
+        'text-secondary': '#A9A9A9', // light grey for muted text
+        'text-tertiary': '#888888', // medium gray for subtle text
+        'text-inverse': '#000000', // black for light backgrounds
+
+        // Heading Colors
+        'heading-h1': '#BED754', // lime green for H1
+        'heading-h2': '#E3651D', // burnt orange for H2
+        'heading-h3': '#F1F1F1', // off-white for H3+
+
+        // Link Colors
+        'link': '#E3651D', // burnt orange for links
+        'link-hover': '#BED754', // lime green for link hover
 
         // Status Colors
-        'success': '#10B981', // emerald-500
-        'success-50': '#ECFDF5', // emerald-50
-        'success-100': '#D1FAE5', // emerald-100
-        'success-foreground': '#FFFFFF', // white
+        'success': '#BED754', // using lime green for success
+        'success-50': '#F4F9E8', // very light lime
+        'success-100': '#E8F2D1', // light lime
+        'success-foreground': '#000000', // black text on lime
 
-        'warning': '#F59E0B', // amber-500
-        'warning-50': '#FFFBEB', // amber-50
-        'warning-100': '#FEF3C7', // amber-100
-        'warning-foreground': '#FFFFFF', // white
+        'warning': '#E3651D', // using burnt orange for warning
+        'warning-50': '#FDF5F0', // very light orange
+        'warning-100': '#FBEAE1', // light orange
+        'warning-foreground': '#FFFFFF', // white text on orange
 
-        'error': '#EF4444', // red-500
-        'error-50': '#FEF2F2', // red-50
-        'error-100': '#FEE2E2', // red-100
-        'error-foreground': '#FFFFFF', // white
+        'error': '#750E21', // using deep burgundy for error
+        'error-50': '#F5E8EB', // very light burgundy
+        'error-100': '#EBD1D7', // light burgundy
+        'error-foreground': '#FFFFFF', // white text on burgundy
 
         // Border Colors
-        'border': 'rgba(255, 255, 255, 0.18)', // glassmorphism border
-        'border-focus': '#6366F1', // indigo-500
-        'border-error': '#EF4444', // red-500
+        'border': 'rgba(241, 241, 241, 0.12)', // subtle off-white border
+        'border-focus': '#BED754', // lime green for focus
+        'border-error': '#750E21', // deep burgundy for error
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
@@ -120,12 +129,14 @@ module.exports = {
         '180': '1.8',
       },
       boxShadow: {
-        'glassmorphism': '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-        'cta-hover': '0 4px 14px 0 rgba(245, 158, 11, 0.25)',
-        'primary': '0 4px 14px 0 rgba(99, 102, 241, 0.25)',
-        'secondary': '0 4px 14px 0 rgba(139, 92, 246, 0.25)',
-        'glow': '0 0 20px rgba(99, 102, 241, 0.3)',
-        'glow-accent': '0 0 20px rgba(245, 158, 11, 0.3)',
+        'glassmorphism': '0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1)',
+        'cta-hover': '0 4px 14px 0 rgba(190, 215, 84, 0.25)', // lime green shadow
+        'primary': '0 4px 14px 0 rgba(190, 215, 84, 0.25)', // lime green shadow
+        'secondary': '0 4px 14px 0 rgba(227, 101, 29, 0.25)', // burnt orange shadow
+        'accent': '0 4px 14px 0 rgba(117, 14, 33, 0.25)', // deep burgundy shadow
+        'glow': '0 0 20px rgba(190, 215, 84, 0.3)', // lime green glow
+        'glow-orange': '0 0 20px rgba(227, 101, 29, 0.3)', // burnt orange glow
+        'glow-burgundy': '0 0 20px rgba(117, 14, 33, 0.3)', // deep burgundy glow
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
@@ -162,8 +173,8 @@ module.exports = {
           '50%': { transform: 'translateY(-10px)' },
         },
         pulseGlow: {
-          '0%': { boxShadow: '0 0 20px rgba(99, 102, 241, 0.3)' },
-          '100%': { boxShadow: '0 0 30px rgba(99, 102, 241, 0.6)' },
+          '0%': { boxShadow: '0 0 20px rgba(190, 215, 84, 0.3)' }, // lime green glow
+          '100%': { boxShadow: '0 0 30px rgba(190, 215, 84, 0.6)' }, // stronger lime green glow
         },
       },
       transitionDuration: {

@@ -114,15 +114,15 @@ const FinalCTASection = () => {
 
               <div className="flex items-center justify-center space-x-6 text-sm text-text-secondary font-inter">
                 <div className="flex items-center space-x-2">
-                  <Icon name="Check" size={16} color="var(--color-success)" />
+                  <Icon name="Check" size={16} color="white" />
                   <span>14-day free trial</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Icon name="Check" size={16} color="var(--color-success)" />
+                  <Icon name="Check" size={16} color="white" />
                   <span>No credit card</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Icon name="Check" size={16} color="var(--color-success)" />
+                  <Icon name="Check" size={16} color="white" />
                   <span>Cancel anytime</span>
                 </div>
               </div>
@@ -179,19 +179,19 @@ const FinalCTASection = () => {
         {/* Trust Badges */}
         <div className="flex flex-wrap justify-center items-center gap-8 mt-12 opacity-60">
           <div className="flex items-center space-x-2">
-            <Icon name="Shield" size={20} color="var(--color-success)" />
+            <Icon name="Shield" size={20} color="white" />
             <span className="text-text-secondary font-inter text-sm">SOC 2 Compliant</span>
           </div>
           <div className="flex items-center space-x-2">
-            <Icon name="Lock" size={20} color="var(--color-success)" />
+            <Icon name="Lock" size={20} color="white" />
             <span className="text-text-secondary font-inter text-sm">GDPR Ready</span>
           </div>
           <div className="flex items-center space-x-2">
-            <Icon name="Database" size={20} color="var(--color-success)" />
+            <Icon name="Database" size={20} color="white" />
             <span className="text-text-secondary font-inter text-sm">256-bit Encryption</span>
           </div>
           <div className="flex items-center space-x-2">
-            <Icon name="Clock" size={20} color="var(--color-success)" />
+            <Icon name="Clock" size={20} color="white" />
             <span className="text-text-secondary font-inter text-sm">99.9% Uptime</span>
           </div>
         </div>

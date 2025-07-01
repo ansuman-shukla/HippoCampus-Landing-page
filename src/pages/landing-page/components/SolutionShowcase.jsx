@@ -92,7 +92,7 @@ const SolutionShowcase = () => {
               {/* Old Way Card */}
               <div className="glassmorphism p-6 rounded-xl border-l-4 border-red-400">
                 <div className="flex items-center mb-3">
-                  <Icon name="FolderOpen" size={20} color="#ef4444" />
+                  <Icon name="FolderOpen" size={20} color="white" />
                   <span className="ml-2 text-sm font-medium text-red-600">Old Way</span>
                 </div>
                 <p className="text-text-secondary text-sm font-inter">
@@ -104,7 +104,7 @@ const SolutionShowcase = () => {
               {/* New Way Card */}
               <div className="glassmorphism p-6 rounded-xl border-l-4 border-green-400">
                 <div className="flex items-center mb-3">
-                  <Icon name="Sparkles" size={20} color="#22c55e" />
+                  <Icon name="Sparkles" size={20} color="white" />
                   <span className="ml-2 text-sm font-medium text-green-600">With HippoCampus</span>
                 </div>
                 <p className="text-text-secondary text-sm font-inter mb-3">

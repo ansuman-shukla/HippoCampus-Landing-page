@@ -185,7 +185,7 @@ const PricingSection = () => {
 
                 {/* Plan Header */}
                 <div className="text-center mb-8">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${plan.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                  <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <Icon 
                       name={plan.id === 'free' ? 'Zap' : plan.id === 'pro' ? 'Brain' : 'Users'} 
                       size={32} 
@@ -216,8 +216,8 @@ const PricingSection = () => {
                 <div className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-start space-x-3">
-                      <div className="w-5 h-5 bg-success-100 rounded-full flex items-center justify-center mt-0.5">
-                        <Icon name="Check" size={12} color="var(--color-success)" />
+                      <div className="w-5 h-5 bg-primary rounded-full flex items-center justify-center mt-0.5">
+                        <Icon name="Check" size={12} color="black" />
                       </div>
                       <span className="text-text-secondary font-inter text-sm">{feature}</span>
                     </div>
@@ -226,8 +226,8 @@ const PricingSection = () => {
                   {/* Limitations */}
                   {plan.limitations.map((limitation, limitIndex) => (
                     <div key={limitIndex} className="flex items-start space-x-3 opacity-60">
-                      <div className="w-5 h-5 bg-error-100 rounded-full flex items-center justify-center mt-0.5">
-                        <Icon name="X" size={12} color="var(--color-error)" />
+                      <div className="w-5 h-5 bg-error rounded-full flex items-center justify-center mt-0.5">
+                        <Icon name="X" size={12} color="white" />
                       </div>
                       <span className="text-text-secondary font-inter text-sm">{limitation}</span>
                     </div>

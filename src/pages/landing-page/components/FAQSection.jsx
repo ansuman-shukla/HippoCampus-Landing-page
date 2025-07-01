@@ -91,7 +91,7 @@ const FAQSection = () => {
                 <div className={`transition-transform duration-300 ${
                   openFAQ === index ? 'transform rotate-180' : ''
                 }`}>
-                  <Icon name="ChevronDown" size={24} color="var(--color-text-secondary)" />
+                  <Icon name="ChevronDown" size={24} color="white" />
                 </div>
               </button>
 

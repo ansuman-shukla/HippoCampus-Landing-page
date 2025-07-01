@@ -36,7 +36,7 @@ const ProblemSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 glassmorphism px-4 py-2 rounded-full mb-6">
-            <Icon name="AlertTriangle" size={16} color="var(--color-warning)" />
+            <Icon name="AlertTriangle" size={16} color="white" />
             <span className="text-sm font-inter text-warning">The Problem</span>
           </div>
           
@@ -60,7 +60,7 @@ const ProblemSection = () => {
               className="glassmorphism p-8 rounded-2xl hover:glassmorphism-hover transition-all duration-300 group"
             >
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-warning to-error rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform">
                   <Icon name={problem.icon} size={24} color="white" />
                 </div>
                 
@@ -103,7 +103,7 @@ const ProblemSection = () => {
         {/* Cost Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="glassmorphism p-8 rounded-2xl text-center hover:glassmorphism-hover transition-all duration-300 group">
-            <div className="w-16 h-16 bg-gradient-to-br from-error to-error-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
               <Icon name="BookmarkX" size={32} color="white" />
             </div>
             <div className="text-3xl font-poppins font-bold text-error mb-2">500+</div>
@@ -114,7 +114,7 @@ const ProblemSection = () => {
           </div>
           
           <div className="glassmorphism p-8 rounded-2xl text-center hover:glassmorphism-hover transition-all duration-300 group">
-            <div className="w-16 h-16 bg-gradient-to-br from-warning to-warning-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
               <Icon name="Timer" size={32} color="white" />
             </div>
             <div className="text-3xl font-poppins font-bold text-warning mb-2">5+</div>
@@ -125,7 +125,7 @@ const ProblemSection = () => {
           </div>
           
           <div className="glassmorphism p-8 rounded-2xl text-center hover:glassmorphism-hover transition-all duration-300 group">
-            <div className="w-16 h-16 bg-gradient-to-br from-error to-warning rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+            <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
               <Icon name="TrendingDown" size={32} color="white" />
             </div>
             <div className="text-3xl font-poppins font-bold text-transparent bg-gradient-to-r from-error to-warning bg-clip-text mb-2">Countless</div>
@@ -139,7 +139,7 @@ const ProblemSection = () => {
         {/* User Quote */}
         <div className="glassmorphism p-8 rounded-2xl text-center max-w-4xl mx-auto">
           <div className="mb-6">
-            <Icon name="Quote" size={48} color="var(--color-primary)" className="mx-auto mb-4 opacity-20" />
+            <Icon name="Quote" size={48} color="white" className="mx-auto mb-4 opacity-20" />
             <blockquote className="text-lg md:text-xl font-lora italic text-text-primary leading-relaxed mb-6">
               "I used to save everything 'for later' but later never came because I could never find anything. I wasn't using my saves—they were just making me feel bad about being disorganized. HippoCampus changed that completely."
             </blockquote>

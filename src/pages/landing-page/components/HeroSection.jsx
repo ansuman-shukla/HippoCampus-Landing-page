@@ -47,8 +47,8 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-violet-50 to-blue-50" />
+      {/* Background - Dark Theme */}
+      <div className="absolute inset-0 bg-black" />
       
       {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -78,7 +78,7 @@ const HeroSection = () => {
             {user && (
               <div className="mb-6 p-4 bg-success-50 border border-success-100 rounded-xl">
                 <div className="flex items-center space-x-2">
-                  <Icon name="CheckCircle" size={20} color="var(--color-success)" />
+                  <Icon name="CheckCircle" size={20} color="white" />
                   <span className="text-success font-medium">
                     Welcome back, {userProfile?.full_name || 'User'}! Ready to remember everything?
                   </span>
@@ -92,7 +92,7 @@ const HeroSection = () => {
                 variant="primary"
                 size="lg"
                 onClick={handleTrialSignup}
-                className="primary-shadow hover:cta-shadow text-lg px-8 py-4 mb-4 w-full sm:w-auto"
+                className="primary-shadow hover:cta-shadow text-lg px-8 py-4 mb-4 w-full sm:w-auto rounded-xl"
               >
                 Never Lose Cool Stuff Again - Install Free
               </Button>
@@ -153,23 +153,23 @@ const HeroSection = () => {
                 onClick={() => setShowDemo(false)}
               />
             </div>
-            <div className="aspect-video bg-gradient-to-br from-primary-100 to-secondary-100 rounded-xl flex items-center justify-center">
+            <div className="aspect-video bg-gradient-to-br from-primary-800 to-secondary-800 rounded-xl flex items-center justify-center">
               <div className="text-center">
-                <Icon name="Play" size={48} color="var(--color-primary)" className="mx-auto mb-4" />
+                <Icon name="Play" size={48} color="white" className="mx-auto mb-4" />
                 <p className="text-text-secondary font-inter mb-4">
                   See how HippoCampus transforms your digital memory
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div className="flex items-center space-x-2">
-                    <Icon name="MousePointer" size={16} color="var(--color-primary)" />
+                    <Icon name="MousePointer" size={16} color="white" />
                     <span>One-click save</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Icon name="Search" size={16} color="var(--color-primary)" />
+                    <Icon name="Search" size={16} color="white" />
                     <span>Natural language search</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <Icon name="Brain" size={16} color="var(--color-primary)" />
+                    <Icon name="Brain" size={16} color="white" />
                     <span>AI-powered organization</span>
                   </div>
                 </div>
@@ -194,7 +194,7 @@ const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <Icon name="ChevronDown" size={24} color="var(--color-text-secondary)" />
+        <Icon name="ChevronDown" size={24} color="white" />
       </div>
     </section>
   );

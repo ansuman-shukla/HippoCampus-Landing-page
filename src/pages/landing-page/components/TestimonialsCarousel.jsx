@@ -143,7 +143,7 @@ const TestimonialsCarousel = () => {
                 {/* Rating */}
                 <div className="flex items-center justify-center md:justify-start space-x-1 mb-4">
                   {Array.from({ length: current.rating }).map((_, index) => (
-                    <Icon key={index} name="Star" size={20} color="var(--color-accent)" />
+                    <Icon key={index} name="Star" size={20} color="white" />
                   ))}
                 </div>
 
@@ -172,7 +172,7 @@ const TestimonialsCarousel = () => {
               className="w-12 h-12 glassmorphism rounded-full flex items-center justify-center glassmorphism-hover transition-glassmorphism"
               aria-label="Previous testimonial"
             >
-              <Icon name="ChevronLeft" size={20} color="var(--color-text-primary)" />
+              <Icon name="ChevronLeft" size={20} color="white" />
             </button>
 
             {/* Dots Indicator */}
@@ -195,7 +195,7 @@ const TestimonialsCarousel = () => {
               className="w-12 h-12 glassmorphism rounded-full flex items-center justify-center glassmorphism-hover transition-glassmorphism"
               aria-label="Next testimonial"
             >
-              <Icon name="ChevronRight" size={20} color="var(--color-text-primary)" />
+              <Icon name="ChevronRight" size={20} color="white" />
             </button>
           </div>
 
@@ -257,7 +257,7 @@ const TestimonialsCarousel = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto">
             <div className="glassmorphism p-4 md:p-6 rounded-2xl">
               <div className="w-12 h-12 mx-auto mb-3 bg-primary/10 rounded-xl flex items-center justify-center">
-                <Icon name="Shield" size={24} color="var(--color-primary)" />
+                <Icon name="Shield" size={24} color="white" />
               </div>
               <div className="text-sm md:text-base font-poppins font-semibold text-text-primary mb-1">
                 SOC 2
@@ -268,7 +268,7 @@ const TestimonialsCarousel = () => {
             </div>
             <div className="glassmorphism p-4 md:p-6 rounded-2xl">
               <div className="w-12 h-12 mx-auto mb-3 bg-secondary/10 rounded-xl flex items-center justify-center">
-                <Icon name="Globe" size={24} color="var(--color-secondary)" />
+                <Icon name="Globe" size={24} color="white" />
               </div>
               <div className="text-sm md:text-base font-poppins font-semibold text-text-primary mb-1">
                 GDPR Compliant
@@ -279,7 +279,7 @@ const TestimonialsCarousel = () => {
             </div>
             <div className="glassmorphism p-4 md:p-6 rounded-2xl">
               <div className="w-12 h-12 mx-auto mb-3 bg-accent/10 rounded-xl flex items-center justify-center">
-                <Icon name="Lock" size={24} color="var(--color-accent)" />
+                <Icon name="Lock" size={24} color="white" />
               </div>
               <div className="text-sm md:text-base font-poppins font-semibold text-text-primary mb-1">
                 256-bit Encryption
@@ -290,7 +290,7 @@ const TestimonialsCarousel = () => {
             </div>
             <div className="glassmorphism p-4 md:p-6 rounded-2xl">
               <div className="w-12 h-12 mx-auto mb-3 bg-success/10 rounded-xl flex items-center justify-center">
-                <Icon name="Activity" size={24} color="var(--color-success)" />
+                <Icon name="Activity" size={24} color="white" />
               </div>
               <div className="text-sm md:text-base font-poppins font-semibold text-text-primary mb-1">
                 99.9% Uptime
